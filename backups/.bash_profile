@@ -13,6 +13,11 @@ if [ -f ~/.bash_alias ]; then
     source ~/.bash_alias
 fi
 
+# bash completions
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
 # git auto complete
 # get script from 
 # curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
