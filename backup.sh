@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TRACKED_FILES_INPUT=".trackedItems"
-BACKUPS_DIR="$DEV_HOME/sovrn-configs/backups/"
+BACKUPS_DIR="$DEV_HOME/backer-upper/backups/"
 
 while read -r item
 do
