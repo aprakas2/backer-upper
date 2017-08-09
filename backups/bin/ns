@@ -1,0 +1,5 @@
+#!/bin/sh
+
+port=$1
+
+sudo netstat | grep ':$port'

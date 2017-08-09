@@ -1,5 +1,6 @@
 export DEV_HOME=~/dev
 
+# load alias file
 if [ -f ~/.bash_alias ]; then
     source ~/.bash_alias
 fi
@@ -8,6 +9,9 @@ fi
 export GOPATH=~/dev/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
+
+# custom scripts
+export PATH=$PATH:~/bin
 
 # git auto complete
 # get script from 

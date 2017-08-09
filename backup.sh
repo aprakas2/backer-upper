@@ -1,14 +1,19 @@
 #!/bin/bash
 
-TRACKED_FILES_INPUT=".trackedFiles"
+TRACKED_FILES_INPUT=".trackedItems"
 BACKUPS_DIR="$DEV_HOME/sovrn-configs/backups/"
 
-while read -r file
+while read -r item
 do
-    if [[ ! -z $file ]]
+    if [[ ! -z $item ]]
+        item="${item/#\~/$HOME}"
     then
-        file="${file/#\~/$HOME}"
-        echo "copying file: $file to: $BACKUPS_DIR"
-        cp $file $BACKUPS_DIR
+        if [[ -f $item ]]; then
+            echo "copying file: $item"
+            cp $item $BACKUPS_DIR
+        elif [[ -d $item ]]; then
+            echo "copying directory: $item"
+            cp -R $item $BACKUPS_DIR
+        fi
     fi
 done < "$TRACKED_FILES_INPUT"
