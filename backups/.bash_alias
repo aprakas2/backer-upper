@@ -12,5 +12,6 @@ alias gmb='git merge-base'
 alias gr='git rebase -i'
 alias gai='git add -i'
 
-# dev
-alias cdd='cd $DEV_HOME'
+# dev stuff
+alias cdd='. cdev'
+
