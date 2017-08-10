@@ -9,10 +9,10 @@ do
         item="${item/#\~/$HOME}"
     then
         if [[ -f $item ]]; then
-            echo "copying file: $item"
+            echo "backing up file: $item"
             cp $item $BACKUPS_DIR
         elif [[ -d $item ]]; then
-            echo "copying directory: $item"
+            echo "backing up directory: $item"
             cp -R $item $BACKUPS_DIR
         fi
     fi
