@@ -4,6 +4,8 @@
 ~/.bash_alias
 ~/.bash_completion
 
+~/.vimrc
+
 ~/.m2/settings.xml
 
 ~/bin
