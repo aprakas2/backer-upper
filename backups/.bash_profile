@@ -5,12 +5,15 @@ export GOPATH=~/dev/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
+# selenium
+export PATH=$PATH:$DEV_HOME/selenium/drivers
+
 # custom scripts
 export PATH=$PATH:~/bin
 
 # load alias file
-if [ -f ~/.bash_alias ]; then
-    source ~/.bash_alias
+if [ -f ~/.bash_aliases ]; then
+    source ~/.bash_aliases
 fi
 
 # bash completions

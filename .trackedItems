@@ -1,7 +1,7 @@
 /etc/hosts
 
 ~/.bash_profile
-~/.bash_alias
+~/.bash_aliases
 ~/.bash_completion
 
 ~/.vimrc
