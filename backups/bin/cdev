@@ -1,4 +1,9 @@
 #!/bin/sh
 
-cd $DEV_HOME/$1
-
+if [[ -d $DEV_HOME/$1 ]]; then
+    cd $DEV_HOME/$1
+else 
+    # go forces the dir structure, but I still want to be able to cd to projects
+    # this will cd to the first project it finds with the given name
+    cd $(find $GOPATH/src -type d -name $1)
+fi

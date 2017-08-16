@@ -4,7 +4,7 @@ _cdd() {
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
 
-    COMPREPLY=( $(compgen -W "$( ls $DEV_HOME)" -- ${cur}) )
+    COMPREPLY=( $(compgen -W "$( ls $GOPATH/src/github.com/*; ls $DEV_HOME)" -- ${cur}) )
     return 0
 }
 
