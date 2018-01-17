@@ -9,3 +9,5 @@ _cdd() {
 }
 
 complete -F _cdd cdd
+
+echo "sourced .bash_completion"

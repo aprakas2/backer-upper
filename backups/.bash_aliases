@@ -15,3 +15,11 @@ alias gai='git add -i'
 # dev stuff
 alias cdd='. cdev'
 
+# vagrant
+alias vu='vagrant up'
+alias vd='vagrant destroy'
+alias vs='vagrant ssh'
+alias vdu='vd -f ; vu'
+alias vprv='vagrant provision'
+
+echo "sourced bash_aliases"
