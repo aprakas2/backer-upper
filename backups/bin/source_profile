@@ -1,0 +1,3 @@
+#!/bin/sh
+
+vi ~/.bash_profile; . ~/.bash_profile

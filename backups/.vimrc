@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 set ts=4
 set autoindent
 set syntax=automatic
@@ -11,3 +13,6 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+
+set wildmenu
+set wildmode=list:longest

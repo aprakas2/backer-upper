@@ -4,6 +4,9 @@ export DEV_HOME=~/dev
 export GOPATH=$DEV_HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
+# weird version downgradey stuff:
+#export PATH=$PATH:/usr/local/opt/go@1.9/bin
+#export GOROOT=/usr/local/opt/go@1.9/
 
 # selenium
 export PATH=$PATH:$DEV_HOME/selenium/drivers
