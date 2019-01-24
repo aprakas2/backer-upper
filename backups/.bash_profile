@@ -1,5 +1,16 @@
 export DEV_HOME=~/dev
 
+# homebrew python
+# https://stackoverflow.com/questions/49704364/make-python3-as-my-default-python-on-mac
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
+export PATH=$PATH:/Users/aprakash/Library/Python/3.7/bin
+
+# mysql
+export PATH=/usr/local/mysql/bin:$PATH
+
+# flyway
+export PATH=$PATH:/usr/local/opt/flyway-5.1.4
+
 # go setup
 export GOPATH=$DEV_HOME/go
 export GOBIN=$GOPATH/bin
@@ -28,6 +39,14 @@ fi
 # get script from 
 # curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 test -f ~/.git-completion.bash && . $_
+
+# hasura completion scripts
+# sudo hasura completion bash --file=$(brew --prefix)/etc/bash_completion.d/hasura
+
+# git shell prompt
+. ~/bin/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1='\w$(__git_ps1 " (%s)")\$ '
 
 
 echo "sourced bash_profile"
