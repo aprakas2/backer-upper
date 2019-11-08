@@ -9,3 +9,18 @@
 255.255.255.255	broadcasthost
 ::1             localhost
 
+
+## aegis testing
+127.0.0.1   fleet01.aegis.lijit.com
+127.0.0.1   fleet02.aegis.lijit.com
+127.0.0.1   fleet03.aegis.lijit.com
+127.0.0.1   fleet04.aegis.lijit.com
+127.0.0.1   fleet05.aegis.lijit.com
+127.0.0.1   fleet06.aegis.lijit.com
+
+# ad center
+127.0.0.1 dev-adcenter.lijit.com
+# Added by Docker Desktop
+# To allow the same kube context to work on the host and the container:
+127.0.0.1 kubernetes.docker.internal
+# End of section

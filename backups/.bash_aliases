@@ -1,4 +1,4 @@
-alias ll='ls -Gla'
+alias ll='ls -Glap'
 alias c='clear'
 
 # git aliases
@@ -12,6 +12,7 @@ alias gp='git pull --rebase'
 alias gmb='git merge-base'
 alias gr='git rebase -i'
 alias gai='git add -i'
+alias gc=". ${HOME}/bin/gitcloner"
 
 # dev stuff
 alias cdd='. cdev'

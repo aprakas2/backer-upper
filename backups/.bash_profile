@@ -5,6 +5,9 @@ export DEV_HOME=~/dev
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
 export PATH=$PATH:/Users/aprakash/Library/Python/3.7/bin
 
+# confluent
+export PATH=/Users/aprakash/dev/confluent-5.2.1/bin:$PATH
+
 # mysql
 export PATH=/usr/local/mysql/bin:$PATH
 
@@ -22,6 +25,9 @@ export PATH=$PATH:$GOBIN
 # selenium
 export PATH=$PATH:$DEV_HOME/selenium/drivers
 
+# node
+export NODE_ENV=dev
+
 # custom scripts
 export PATH=$PATH:~/bin
 
@@ -38,17 +44,22 @@ fi
 # git auto complete
 # get script from 
 # curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
-test -f ~/.git-completion.bash && . $_
+# test -f ~/.git-completion.bash && . $_
+test -f /usr/local/etc/bash_completion.d/git-completion.bash && . $_
+# git shell prompt
+#. ~/bin/git-prompt.sh
+test -f /usr/local/etc/bash_completion.d/git-prompt.sh && . $_
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_SHOWUPSTREAM="auto"
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1='\w$(__git_ps1 " (%s)")\$ '
 
 # hasura completion scripts
 # sudo hasura completion bash --file=$(brew --prefix)/etc/bash_completion.d/hasura
 
-# git shell prompt
-. ~/bin/git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1='\w$(__git_ps1 " (%s)")\$ '
-
+ if [[ ${SHELL} != "/bin/sh" ]]; then
+     test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+ fi
 
 echo "sourced bash_profile"
 
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+REPO=${1}
+ORG=${2:-sovrn}
+
+cd $DEV_HOME
+
+git clone git@github.com:${ORG}/${REPO}
+
+cd ${REPO}
+
