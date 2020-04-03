@@ -1,0 +1,5 @@
+#!/bin/bash
+
+vault login --method=ldap username=aprakash
+
+. ${DEV_HOME}/re-utils/vault/vault-aws-secrets-engine.sh
