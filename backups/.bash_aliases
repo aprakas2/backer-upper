@@ -36,4 +36,6 @@ alias tf='terraform'
 alias a='. aliases'
 alias src='. source_profile'
 
-alias awsbit='source $DEV_HOME/terraform-sovrn/files/bitium/bitium.sh'
+# vault
+alias vauth="source $DEV_HOME/re-utils/vault/vault-aws-secrets-engine.sh"
+alias awsauth='. awslogin'

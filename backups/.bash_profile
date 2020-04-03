@@ -1,12 +1,16 @@
 export DEV_HOME=~/dev
 
+# default to java8
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_131-zulu-8.21.0.1`
+
 # homebrew python
 # https://stackoverflow.com/questions/49704364/make-python3-as-my-default-python-on-mac
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
 export PATH=$PATH:/Users/aprakash/Library/Python/3.7/bin
 
 # confluent
-export PATH=/Users/aprakash/dev/confluent-5.2.1/bin:$PATH
+export CONFLUENT_HOME=$DEV_HOME/confluent-5.4.0/
+export PATH=$DEV_HOME/confluent:$PATH
 
 # mysql
 export PATH=/usr/local/mysql/bin:$PATH
@@ -60,6 +64,9 @@ export PS1='\w$(__git_ps1 " (%s)")\$ '
  if [[ ${SHELL} != "/bin/sh" ]]; then
      test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
  fi
+
+# sovrn vault
+export VAULT_ADDR=https://vault.lijit.com
 
 echo "sourced bash_profile"
 
